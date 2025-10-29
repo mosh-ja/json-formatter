@@ -13,3 +13,8 @@ uv tool install specify-cli --force --from git+https://github.com/github/spec-ki
 ```
 specify init --here --ai cursor-agent  --script sh
 ```
+
+3. Constitution prompt
+```
+/speckit.constitution Keep it simple and follow best practices
+```
