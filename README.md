@@ -18,3 +18,8 @@ specify init --here --ai cursor-agent  --script sh
 ```
 /speckit.constitution Keep it simple and follow best practices
 ```
+
+4. Specify prompt (describe the goal)
+```
+/speckit.specify Build a JSON formatting app that will be deployed on GitHub Pages
+```
