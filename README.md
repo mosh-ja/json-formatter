@@ -33,3 +33,8 @@ specify init --here --ai cursor-agent  --script sh
 ```
 /speckit.plan Use a common and straightforward approach. Include the deployment to Github pages.
 ```
+
+7. Tasks prompt
+```
+/speckit.tasks
+```
