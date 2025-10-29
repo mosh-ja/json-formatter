@@ -23,3 +23,8 @@ specify init --here --ai cursor-agent  --script sh
 ```
 /speckit.specify Build a JSON formatting app that will be deployed on GitHub Pages
 ```
+
+5. Clarify prompt
+```
+/speckit.clarify Anything that needs clarification?
+```

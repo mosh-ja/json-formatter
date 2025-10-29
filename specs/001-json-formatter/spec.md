@@ -22,14 +22,14 @@ This specification covers a web-based JSON formatting application that will be d
 
 2. **[REQ-002]** JSON Validation
    - **Acceptance Criteria:**
-     - App validates JSON syntax and reports specific error locations
-     - Invalid JSON displays clear, user-friendly error messages
-     - Error messages indicate line and column numbers when possible
+     - App validates JSON syntax and reports errors
+     - Invalid JSON displays simple, user-friendly error messages
+     - Error messages provide basic feedback without detailed line/column information
    - **Constitution Alignment:** Quality Focus - ensures reliable JSON processing
 
 3. **[REQ-003]** JSON Formatting
    - **Acceptance Criteria:**
-     - Valid JSON is formatted with consistent indentation (2 or 4 spaces)
+     - Valid JSON is formatted with consistent 2-space indentation
      - Formatted output preserves all original data and structure
      - Formatting handles nested objects and arrays correctly
    - **Constitution Alignment:** Best Practices Adherence - follows JSON formatting standards
@@ -44,7 +44,7 @@ This specification covers a web-based JSON formatting application that will be d
 5. **[REQ-005]** Copy to Clipboard
    - **Acceptance Criteria:**
      - Users can copy formatted JSON to clipboard with one click
-     - Copy operation provides visual confirmation (success/error feedback)
+     - Copy operation provides visual confirmation (success/error feedback) for 2-3 seconds
      - Copy function works across different browsers and devices
    - **Constitution Alignment:** Simplicity First - one-click operation for common task
 
@@ -55,11 +55,11 @@ This specification covers a web-based JSON formatting application that will be d
      - Toggle preserves current formatting preferences
    - **Constitution Alignment:** Best Practices Adherence - provides industry-standard options
 
-7. **[REQ-007]** Responsive Design
+7. **[REQ-007]** Desktop-Focused Design
    - **Acceptance Criteria:**
-     - App works on desktop, tablet, and mobile devices
-     - Layout adapts to different screen sizes
-     - Touch interactions work properly on mobile devices
+     - App optimized for desktop and laptop screens
+     - Layout works well on standard desktop resolutions
+     - Keyboard and mouse interactions work properly
    - **Constitution Alignment:** Best Practices Adherence - follows modern web standards
 
 ### Non-Functional Requirements
@@ -109,13 +109,22 @@ This specification covers a web-based JSON formatting application that will be d
 - **Cross-Browser Testing**: Verify functionality across supported browsers
 - **Performance Testing**: Test with various JSON document sizes
 - **Accessibility Testing**: Verify keyboard navigation and screen reader compatibility
-- **Mobile Testing**: Test responsive design on various device sizes
+- **Desktop Testing**: Test layout on various desktop screen sizes
 
 ## Dependencies
 
 - **GitHub Pages**: For hosting and deployment
 - **Modern Web Browser**: For JavaScript execution and DOM manipulation
 - **No External APIs**: App operates entirely client-side
+
+## Clarifications
+
+### Session 2024-12-19
+- Q: When users encounter JSON parsing errors, what level of error state detail should be provided? → A: Basic error states with simple error messages only
+- Q: What should be the default indentation for JSON formatting? → A: 2 spaces (industry standard for JSON)
+- Q: How should the app handle the initial empty state when no JSON is provided? → A: Show nothing until user starts typing
+- Q: How long should the copy success feedback be displayed? → A: 2-3 seconds (sufficient for user confirmation)
+- Q: How should the input and output areas be arranged on mobile devices? → A: Not need to support mobile
 
 ## Review Checklist
 
