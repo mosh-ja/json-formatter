@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean, intuitive JSON formatter and validator web application">
+    <meta name="keywords" content="json, formatter, validator, pretty print, minify">
+    <meta name="author" content="JSON Formatter Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JSON Formatter - Clean & Intuitive">
+    <meta property="og:description" content="Format, validate, and copy JSON with ease. No registration required.">
+    <meta property="og:url" content="https://your-username.github.io/json-formatter/">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="JSON Formatter - Clean & Intuitive">
+    <meta property="twitter:description" content="Format, validate, and copy JSON with ease. No registration required.">
+
+    <title>JSON Formatter - Clean & Intuitive</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="app-title">JSON Formatter</h1>
+            <p class="app-subtitle">Format, validate, and copy JSON with ease</p>
+        </header>
+
+        <main class="app-main">
+            <div class="input-section">
+                <div class="input-header">
+                    <h2>Input JSON</h2>
+                    <div class="input-controls">
+                        <button id="clear-input" class="btn btn-secondary" aria-label="Clear input">Clear</button>
+                        <span id="input-stats" class="stats" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <textarea
+                        id="json-input"
+                        class="json-textarea"
+                        placeholder="Paste your JSON here..."
+                        aria-label="JSON input"
+                        rows="10"
+                        spellcheck="false"
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div class="format-controls">
+                    <div class="format-toggle">
+                        <label for="format-formatted" class="format-label">
+                            <input type="radio" id="format-formatted" name="format" value="formatted" checked>
+                            <span class="format-text">Formatted</span>
+                        </label>
+                        <label for="format-minified" class="format-label">
+                            <input type="radio" id="format-minified" name="format" value="minified">
+                            <span class="format-text">Minified</span>
+                        </label>
+                    </div>
+                    <div class="indentation-control">
+                        <label for="indent-size" class="indent-label">Indentation:</label>
+                        <select id="indent-size" class="indent-select">
+                            <option value="2">2 spaces</option>
+                            <option value="4">4 spaces</option>
+                            <option value="8">8 spaces</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="action-controls">
+                    <button id="format-btn" class="btn btn-primary">Format JSON</button>
+                    <button id="copy-btn" class="btn btn-success" disabled>Copy to Clipboard</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Formatted Output</h2>
+                    <div class="output-controls">
+                        <button id="clear-output" class="btn btn-secondary" aria-label="Clear output">Clear</button>
+                        <span id="output-stats" class="stats" aria-live="polite"></span>
+                    </div>
+                </div>
+                <div class="output-container">
+                    <pre id="json-output" class="json-output" aria-label="Formatted JSON output"></pre>
+                </div>
+            </div>
+
+            <div id="error-section" class="error-section hidden" role="alert" aria-live="assertive">
+                <div class="error-header">
+                    <h3>Error</h3>
+                    <button id="close-error" class="btn btn-close" aria-label="Close error">×</button>
+                </div>
+                <div id="error-content" class="error-content"></div>
+            </div>
+
+            <div id="success-message" class="success-message hidden" role="status" aria-live="polite">
+                <span id="success-text"></span>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2024 JSON Formatter. Built with ❤️ for developers.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
