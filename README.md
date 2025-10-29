@@ -28,3 +28,8 @@ specify init --here --ai cursor-agent  --script sh
 ```
 /speckit.clarify Anything that needs clarification?
 ```
+
+6. Plan prompt
+```
+/speckit.plan Use a common and straightforward approach. Include the deployment to Github pages.
+```
