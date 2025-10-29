@@ -38,3 +38,8 @@ specify init --here --ai cursor-agent  --script sh
 ```
 /speckit.tasks
 ```
+
+8. Implement prompt
+```
+/speckit.implement Implement the tasks. If there's a problem and you find yourself going in circles, stop and talk to me.
+```
